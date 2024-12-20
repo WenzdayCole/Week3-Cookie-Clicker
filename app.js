@@ -5,6 +5,18 @@ let gameData = {
     cookiesPerSecond: 0,
 };
 
+const cookieButton = document.getElementById("cookie-increment-button");
+cookieButton.addEventListener("click", incrementCookie);
+function incrementCookie() {
+gameData.cookieCount++;
+
+
+// !Emine's function as reference 
+//increasebutton.addEventListener("click", buycookie);
+// function buycookie() 
+// {cookiesPerSecond++;
+//   increasecookie.innerText = cookiesPerSecond;}
+}
 
 const upgradesContainer = document.getElementById("upgrades-shop-container");
 async function getShopUpgrades() {
@@ -26,7 +38,8 @@ const shopUpgradesArray = [];
 shopUpgradesArray.push("Data");
 //fill with upgrades from API
 console.log(shopUpgradesArray);
-//!Alex helped me with this
+//!Alex helped me with this - I think it puts data in to the array.
+// CHECK CONSOLE: 2 arrays were made, not sure how to get the upgrade shop items into the Array(1)
 
 
 //This is where you should go back to your WK2 gallery loop and apply the same logic to this loop!
